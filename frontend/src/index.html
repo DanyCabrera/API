@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark">
+        <div class="container">
+            <h2 class="text-light">CRUD JS EXPRESS MYSQL</h2>
+        </div>
+    </nav>
+
+    <div class="container p-4 mt-4 d-flex justify-content-center">
+        <div class="card" style="width: 40rem;">
+            <div class="card-body p-5">
+                <form id="crud">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text px-4">Nombre</span>
+                        <input id="nombre" type="text" aria-label="First name" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text px-4">Correo</span>
+                        <input id="correo" type="text" aria-label="Email" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text px-4">Dirección</span>
+                        <input id="direccion" type="text" aria-label="Address" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text px-4">Teléfono</span>
+                        <input id="telefono" type="number" aria-label="Phone" class="form-control">
+                    </div>
+                    <div class="input-group" style="gap: 5px;">
+                        <input id="btnAdd" type="submit" class="btn btn-primary form-control" value="Agregar">
+                        <input id="btnCancel" type="button" class="btn btn-warning form-control" value="Cancelar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container input-group">
+        <input style="width: 25rem;" id="buscar" placeholder="Buscar..." class="form-control">
+    </div>
+    <div class="p-4">
+        <table class="table table-striped-columns table-dark">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de creación</th>
+                    <th>Fecha de actualización</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="datos"></tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="crudUpdate">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Id</span>
+                            <input id="idEdit" type="button" class="btn btn-ligth">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Nombre</span>
+                            <input id="nombreUpdate" type="text" aria-label="First name" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Correo</span>
+                            <input id="correoUpdate" type="text" aria-label="Email" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Dirección</span>
+                            <input id="direccionUpdate" type="text" aria-label="Address" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Teléfono</span>
+                            <input id="telefonoUpdate" type="number" aria-label="Phone" class="form-control">
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" class="btn btn-success form-control" value="Actualizar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../service/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
