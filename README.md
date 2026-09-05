@@ -29,3 +29,15 @@ npm start
 ```bash
 Click derecho al archivo index.html y darle en la opción de OPEN WITH LIVE SERVER
 ```
+
+## Field Ledger (Pokédex)
+
+Client-side catalog in `pokedex/`. It reads [PokeAPI](https://pokeapi.co/) — search by name or filter by type.
+
+```bash
+cd pokedex
+npm install
+npm run dev
+```
+
+Open http://localhost:5173. See `pokedex/README.md` for the stack and routes.
